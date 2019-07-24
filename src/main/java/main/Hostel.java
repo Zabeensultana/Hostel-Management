@@ -36,21 +36,39 @@ public class Hostel{
 	               String line = null;
 	            
 	               //write your code here !!!
+	               
+	             
 	               while ((line = br.readLine()) != null) {
 		               String[] splited = line.split("\\s+");
 		               String checkName = splited[0];
 		               //write your code here !!!
+		             if(checkName == name )
+		             {
+		            	 return false;
+		             }
+		             else
+		            	 return true;
 //		               compare check name with name and return true if present and false if not
+	              
 	               }
-	               
-	               
-	            }catch(Exception e){
+	             
+	             }catch(Exception e){
 	                System.out.println(e);
 	            }
 			return true;
 	   }
        public static void allotHostel(){
     	   //write your code here!!!
+    	  try
+    	  {
+    	   writedata();
+    	  }
+    	  catch(Exception e)
+    	  {
+    		  System.out.println(e);
+    	  }
+    	         
+       
     	   
        }
 
@@ -73,14 +91,14 @@ public class Hostel{
         }
            
        public static boolean verifyName(String name){
-    	   boolean chk = true;
     	   
+    	   boolean chk = true;
     	   //write your code here
     	   
+    	   chk=readData(name);
+    	   
     	   return chk;
-        }
-        
-
+       }
 		static String typeName(){
             Scanner sc = new Scanner(System.in);
             String name;
